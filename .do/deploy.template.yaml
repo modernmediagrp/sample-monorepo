@@ -6,7 +6,7 @@ spec:
     environment_slug: html
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-monorepo.git
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
     source_dir: frontend
     index_document: hello.html
     error_document: error.html
@@ -16,7 +16,7 @@ spec:
   - name: landing
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-monorepo.git
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
     source_dir: landing
     dockerfile_path: landing/Dockerfile
     output_dir: /app
@@ -29,7 +29,7 @@ spec:
     environment_slug: go
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-monorepo.git
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
     source_dir: api
     routes:
     - path: /api
@@ -38,7 +38,7 @@ spec:
     environment_slug: go
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-monorepo.git
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
     source_dir: webhook
     routes:
     - path: /webhook
@@ -47,7 +47,7 @@ spec:
   - name: worker
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-monorepo.git
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
     source_dir: worker
     dockerfile_path: worker/Dockerfile
     run_command: sh -c "cat ./ok && sleep infinity"
