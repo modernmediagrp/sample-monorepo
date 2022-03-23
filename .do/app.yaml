@@ -25,6 +25,18 @@ static_sites:
   routes:
   - path: /landing
 
+- name: frontend-pp
+  github:
+    repo: modernmediagrp/sample-monorepo
+    branch: main
+    deploy_on_push: true
+  source_dir: frontend-pp
+  dockerfile_path: frontend-pp/Dockerfile
+  output_dir: /app
+  error_document: error.html
+  routes:
+  - path: /frontend-pp
+
 services:
 - name: frontend-rr
   environment_slug: node-js
@@ -33,33 +45,3 @@ services:
     deploy_on_push: true
     repo: modernmediagrp/sample-monorepo
   source_dir: frontend-rr
-
-- name: api
-  environment_slug: go
-  github:
-    repo: modernmediagrp/sample-monorepo
-    branch: main
-    deploy_on_push: true
-  source_dir: api
-  routes:
-  - path: /api
-
-- name: webhook
-  environment_slug: go
-  github:
-    repo: modernmediagrp/sample-monorepo
-    branch: main
-    deploy_on_push: true
-  source_dir: webhook
-  routes:
-  - path: /webhook
-
-workers:
-- name: worker
-  github:
-    repo: modernmediagrp/sample-monorepo
-    branch: main
-    deploy_on_push: true
-  source_dir: worker
-  dockerfile_path: worker/Dockerfile
-  run_command: sh -c "cat ./ok && sleep infinity"
