@@ -26,6 +26,14 @@ static_sites:
   - path: /landing
 
 services:
+- name: frontend-rr
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: modernmediagrp/sample-monorepo
+  source_dir: frontend-rr
+
 - name: api
   environment_slug: go
   github:

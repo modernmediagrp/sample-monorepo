@@ -25,6 +25,12 @@ spec:
     - path: /landing
 
   services:
+  -  name: frontend-rr
+    environment_slug: node-js
+    git:
+      branch: main
+      repo_clone_url: https://github.com/modernmediagrp/sample-monorepo.git
+
   - name: api
     environment_slug: go
     git:
